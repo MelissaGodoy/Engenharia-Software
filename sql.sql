@@ -65,7 +65,7 @@
 	Create Table Notificacao
 	(IdEmprestimo Int Not Null,
 	HorarioMensagem Datetime Not Null,
-	Mensagem Varchar (20) Not Null,)
+	Mensagem Varchar (100) Not Null,)
 	Go
 
 	--Adicionando a chave primaria da tabela Notificação--
