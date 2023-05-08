@@ -43,15 +43,6 @@ Add Constraint PK_Revista_CodigoRevista Primary Key
 (CodigoRevista)
 Go	
 
---Criando um novo banco de dados--
-Create Database EngenhariaSoftware
-Go
-
-
---Conectando-se ao banco de dados--
-Use EngenhariaSoftware
-Go
-
 --Criando a tabela "Caixa" --
 
 Create Table Caixa 
