@@ -136,7 +136,7 @@ insert into emprestimo(IdAmigo,CodigoDaRevista,DataEmprestimo,DataDevolucao) val
 --Inserindo os valores da tabela Notificação --
 
 	Insert Into Notificacao( IdEmprestimo, HorarioMensagem, Mensagem)
-Values ( 1,'06-03-2023 09:00:00','Venha emprestar um livro novamente, aproveite para devolver caso haja pegado!')
+Values ( 1,'06-03-2023 09:00:00','Venha emprestar um livro novamente, aproveite para devolver caso tenha pegado!')
 
 	Insert Into Notificacao( IdEmprestimo, HorarioMensagem, Mensagem)
 Values ( 2,'15-4-2023 09:00:00','Está na hora de pegar um novo livro!')
