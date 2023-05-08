@@ -42,3 +42,36 @@
 
 	alter table emprestimo
 		add constraint PK_emprestimo_IdEmprestimo Primary Key(IdEmprestimo)
+
+
+--Criando a tabela "Caixa" --
+
+	Create Table Caixa 
+	(IdCaixa Int identity (1,1) Not Null,
+	PesoCaixa Int Not Null,
+	EtiquetaCaixa Varchar(70) Not Null,
+	Cor Varchar (50) Not Null)
+	Go
+
+	--Adicionando a chave primaria da tabela Caixa--
+	Alter table Caixa
+	Add Constraint PK_Caixa_IdCaixa Primary Key
+	(IdCaixa)
+	Go
+
+
+--Criando a tabela Notificação--
+
+	Create Table Notificacao
+	(IdEmprestimo Int Not Null,
+	HorarioMensagem Datetime Not Null,
+	Mensagem Varchar (20) Not Null,)
+	Go
+
+	--Adicionando a chave primaria da tabela Notificação--
+
+	Alter table Notificacao 
+	Add Constraint PK_Notificacao_IdEmprestimo Primary Key
+	(IdEmprestimo)
+	Go
+
