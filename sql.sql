@@ -32,6 +32,7 @@
 	(CodigoRevista)
 	Go
 
+-- Criando tabela "emprestimo"
 	CREATE TABLE emprestimo(
 		IdEmprestimo int Identity(1,1), 
 		IdAmigo int,
@@ -87,6 +88,7 @@
 	References Emprestimo (IdEmprestimo)
 	Go	
 
+-- Adicionando o chave estrangeiras na tabela emprestimo
 	alter table emprestimo
 		add constraint PK_emprestimo_Revistas_CodRevista foreign key(CodigoDaRevista)
 		references Revistas(CodigoRevista)
@@ -129,6 +131,7 @@ Values ( 3, 150,'Terror','Vermelho')
  Insert Into Revistas (TipoDeColeção, NumeroDaEdicao, AnoDaRevista, IdCaixa)
  Values ('Ação' , 2 , 2002 , 1)
 
+--Inserindo os valores na tabela emprestimo
 insert into emprestimo(IdAmigo,CodigoDaRevista,DataEmprestimo,DataDevolucao) values(1,1,'08-05-2023','08-06-2022')
 insert into emprestimo(IdAmigo,CodigoDaRevista,DataEmprestimo,DataDevolucao) values(2,2,'08-05-2023','08-06-2022')
 insert into emprestimo(IdAmigo,CodigoDaRevista,DataEmprestimo,DataDevolucao) values(3,3,'08-05-2023','08-06-2022')
