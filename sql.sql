@@ -87,5 +87,15 @@
 	References Emprestimo (IdEmprestimo)
 	Go	
 
+	alter table emprestimo
+		add constraint PK_emprestimo_Revistas_CodRevista foreign key(CodigoDaRevista)
+		references Revistas(CodigoRevista)
+	Go
+
+	
+	alter table emprestimo
+		add constraint PK_emprestimo_Id_Amigo foreign key(IdAmigo)
+		references CadastroAmigo(IdAmigo)
+	Go
 	
 
