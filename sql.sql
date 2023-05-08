@@ -27,6 +27,7 @@ CREATE TABLE emprestimo(
 
 alter table emprestimo
 	add constraint PK_emprestimo_IdEmprestimo Primary Key(IdEmprestimo)
+	
 --Criando a tabela Revistas--
 Create Table Revistas
 (CodigoRevista Int identity (1,1) Not Null,
