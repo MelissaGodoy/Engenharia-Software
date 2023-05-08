@@ -1,68 +1,71 @@
---Criando um novo banco de dados--
-Create Database EngenhariaSoftware
+	--Criando um novo banco de dados--
+	Create Database EngenhariaSoftware
+	Go
+
+
+	--Conectando-se ao banco de dados--
+	Use EngenhariaSoftware
+	Go
+
+	create table CadastroAmigo
+	(IdAmigo int Not Null Identity(1,1),
+	Endereco varchar(100) null,
+	Telefone int null,
+	NomeResponsavel varchar(100) not null,
+	NomeAmigo varchar(100) not null)
+
+	alter table CadastroAmigo 
+	Add Constraint Pk_CadastroAmigo_IdAmigo Primary key(IdAmigo)
+
+	CREATE TABLE emprestimo(
+		IdEmprestimo int Identity(1,1), 
+		IdAmigo int,
+		CodigoDaRevista Int,
+		DataEmprestimo date Not Null,
+		DataDevolucao date Not Null,
+	)
+
+	alter table emprestimo
+		add constraint PK_emprestimo_IdEmprestimo Primary Key(IdEmprestimo)
+		
+	--Criando a tabela Revistas--
+	Create Table Revistas
+	(CodigoRevista Int identity (1,1) Not Null,
+	TipoDeColeção Varchar(60) Not Null,
+	NumeroDaEdicao Int Not Null,
+	AnoDaRevista Int Not Null,
+	IdCaixa Int Not Null)
+	Go
+
+	--Adicionando a chave primaria da tabela Revistas--
+	Alter Table Revistas
+	Add Constraint PK_Revista_CodigoRevista Primary Key
+	(CodigoRevista)
+	Go	
+
+	--Criando a tabela "Caixa" --
+
+	Create Table Caixa 
+	(IdCaixa Int identity (1,1) Not Null,
+	PesoCaixa Int Not Null,
+	EtiquetaCaixa Varchar(70) Not Null,
+	Cor Varchar (50) Not Null)
+	Go
+
+	--Adicionando a chave primaria da tabela Caixa--
+	Alter table Caixa
+	Add Constraint PK_Caixa_IdCaixa Primary Key
+	(IdCaixa)
+	Go
+
+
+Drop table Notificacao
 Go
-
-
---Conectando-se ao banco de dados--
-Use EngenhariaSoftware
-Go
-
-create table CadastroAmigo
-(IdAmigo int Not Null Identity(1,1),
-Endereco varchar(100) null,
-Telefone int null,
-NomeResponsavel varchar(100) not null,
-NomeAmigo varchar(100) not null)
-
-alter table CadastroAmigo 
-Add Constraint Pk_CadastroAmigo_IdAmigo Primary key(IdAmigo)
-
-CREATE TABLE emprestimo(
-	IdEmprestimo int Identity(1,1), 
-	IdAmigo int,
-	CodigoDaRevista Int,
-	DataEmprestimo date Not Null,
-	DataDevolucao date Not Null,
-)
-
-alter table emprestimo
-	add constraint PK_emprestimo_IdEmprestimo Primary Key(IdEmprestimo)
-	
---Criando a tabela Revistas--
-Create Table Revistas
-(CodigoRevista Int identity (1,1) Not Null,
-TipoDeColeção Varchar(60) Not Null,
-NumeroDaEdicao Int Not Null,
-AnoDaRevista Int Not Null,
-IdCaixa Int Not Null)
-Go
-
---Adicionando a chave primaria da tabela Revistas--
-Alter Table Revistas
-Add Constraint PK_Revista_CodigoRevista Primary Key
-(CodigoRevista)
-Go	
-
---Criando a tabela "Caixa" --
-
-Create Table Caixa 
-(IdCaixa Int identity (1,1) Not Null,
-PesoCaixa Int Not Null,
-EtiquetaCaixa Varchar(70) Not Null,
-Cor Varchar (50) Not Null)
-Go
-
---Adicionando a chave primaria da tabela Caixa--
-Alter table Caixa
-Add Constraint PK_Caixa_IdCaixa Primary Key
-(IdCaixa)
-Go
-
 
 --Criando a tabela Notificação--
 
 Create Table Notificacao
-(IdEmprestimo Int identity (1,1) Not Null,
+(IdEmprestimo Int Not Null,
 HorarioMensagem Datetime Not Null,
 Mensagem Varchar (20) Not Null,)
 Go
@@ -74,16 +77,34 @@ Add Constraint PK_Notificacao_IdEmprestimo Primary Key
 (IdEmprestimo)
 Go
 
--- Adicionando o Relacionamento entre a Tabela Revistas e Tabela Caixa --
-Alter Table Revistas
- Add Constraint [FK_Revistas_Caixa_IdDaCaixa] Foreign Key (IdDaCaixa)
-  References Caixa (IdDaCaixa)
+--Adicionando o Relacionamento entre Emprestimo e a Notificação --
+Alter table Notificacao
+	Add Constraint [FK_Notificacao_emprestimo_IdEmprestimo] Foreign Key (IdEmprestimo)
+	References Emprestimo (IdEmprestimo)
+Go	
+
+
+Drop table Notificacao
 Go
 
-alter table emprestimo
-	add constraint FK_emprestimo_CadastroAmigo_IdAmigo foreign key(IdAmigo)
-	references CadastroAmigo(IdAmigo)
 
-alter table emprestimo
-	add constraint FK_emprestimo_Revistas_CodigoRevista foreign key(CodigoDaRevista)
-	references Revistas(CodigoRevista)
+--Criando a tabela Notificação--
+
+Create Table Notificacao
+(IdEmprestimo Int Not Null,
+HorarioMensagem Datetime Not Null,
+Mensagem Varchar (20) Not Null,)
+Go
+
+--Adicionando a chave primaria da tabela Notificação--
+
+Alter table Notificacao 
+Add Constraint PK_Notificacao_IdEmprestimo Primary Key
+(IdEmprestimo)
+Go
+
+--Adicionando o Relacionamento entre Emprestimo e a Notificação --
+Alter table Notificacao
+	Add Constraint [FK_Notificacao_emprestimo_IdEmprestimo] Foreign Key (IdEmprestimo)
+	References Emprestimo (IdEmprestimo)
+Go	
