@@ -117,3 +117,7 @@ Values ( 200,'Aventura','Amarelo')
 	
 	Insert Into Caixa (  PesoCaixa,	EtiquetaCaixa, Cor)
 Values (  150,'Terror','Vermelho')
+
+ --Inserindo dados na tabela Revistas--
+ Insert Into Revistas (CodigoRevista, TipoDeColecao, NumeroDaEdicao, AnoDaRevista, IdCaixa)
+ Values ( '123' , 'terror' , '2' , '2002' , '1')
