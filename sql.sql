@@ -74,4 +74,10 @@
 	Add Constraint PK_Notificacao_IdEmprestimo Primary Key
 	(IdEmprestimo)
 	Go
+	
+	--Adicionando um relacionamento entre a tabela revistas e a tabela caixa--
+Alter Table Revistas
+ Add Constraint [FK_Revistas_Caixa_IdCaixa] Foreign Key (IdCaixa)
+  References Caixa (IdCaixa)
+Go	
 
