@@ -128,3 +128,7 @@ Values (  150,'Terror','Vermelho')
  --Inserindo dados na tabela Revistas--
  Insert Into Revistas (TipoDeColeção, NumeroDaEdicao, AnoDaRevista, IdCaixa)
  Values ('Ação' , 2 , 2002 , 1)
+
+insert into emprestimo(IdAmigo,CodigoDaRevista,DataEmprestimo,DataDevolucao) values(1,1,'08-05-2023','08-06-2022')
+insert into emprestimo(IdAmigo,CodigoDaRevista,DataEmprestimo,DataDevolucao) values(1,2,'08-05-2023','08-06-2022')
+insert into emprestimo(IdAmigo,CodigoDaRevista,DataEmprestimo,DataDevolucao) values(1,3,'08-05-2023','08-06-2022')
