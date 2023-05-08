@@ -15,4 +15,4 @@ NomeResponsavel varchar(100) not null,
 NomeAmigo varchar(100) not null)
 
 alter table CadastroAmigo 
-Add Constraint Pk_IdAmigo Primary key(IdAmigo)
+Add Constraint Pk_CadastroAmigo_IdAmigo Primary key(IdAmigo)
