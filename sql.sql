@@ -107,13 +107,13 @@ Values ('Rua João 23',119563277,'Julio Cesar Almeida', 'Renato Cesar Almeida'),
 ('Rua Bertioga',119465472,'Fabiana Moraes', 'Karina Moraes')
  
 
---Inserindo os valores da tabela Caixa--
+-Inserindo os valores da tabela Caixa--
 
-	Insert Into Caixa ( IdCaixa, PesoCaixa,	EtiquetaCaixa, Cor)
-Values ( 1, 250,'Ação','Azul')
+	Insert Into Caixa (  PesoCaixa,	EtiquetaCaixa, Cor)
+Values (  250,'Ação','Azul')
 
-	Insert Into Caixa ( IdCaixa, PesoCaixa,	EtiquetaCaixa, Cor)
-Values ( 2, 200,'Aventura','Amarelo')
+	Insert Into Caixa (  PesoCaixa,	EtiquetaCaixa, Cor)
+Values ( 200,'Aventura','Amarelo')
 	
-	Insert Into Caixa ( IdCaixa, PesoCaixa,	EtiquetaCaixa, Cor)
-Values ( 3, 150,'Terror','Vermelho')
+	Insert Into Caixa (  PesoCaixa,	EtiquetaCaixa, Cor)
+Values (  150,'Terror','Vermelho')
