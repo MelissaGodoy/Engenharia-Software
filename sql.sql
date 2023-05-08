@@ -112,13 +112,13 @@ Values ('Rua João 23',119563277,'Julio Cesar Almeida', 'Renato Cesar Almeida'),
 --Inserindo os valores da tabela Caixa--
 
 	Insert Into Caixa (  PesoCaixa,	EtiquetaCaixa, Cor)
-Values (  1, 250,'Ação','Azul')
+Values (250,'Ação','Azul')
 
 	Insert Into Caixa (  PesoCaixa,	EtiquetaCaixa, Cor)
-Values ( 2, 200,'Aventura','Amarelo')
+Values (200,'Aventura','Amarelo')
 	
 	Insert Into Caixa (  PesoCaixa,	EtiquetaCaixa, Cor)
-Values ( 3, 150,'Terror','Vermelho')
+Values (150,'Terror','Vermelho')
 
  --Inserindo dados na tabela Revistas--
  Insert Into Revistas (TipoDeColeção, NumeroDaEdicao, AnoDaRevista, IdCaixa)
