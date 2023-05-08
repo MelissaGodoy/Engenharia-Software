@@ -34,7 +34,7 @@ Create Table Revistas
 TipoDeColeção Varchar(60) Not Null,
 NumeroDaEdicao Int Not Null,
 AnoDaRevista Int Not Null,
-CodigoDaCaixa Int Not Null)
+IdCaixa Int Not Null)
 Go
 
 --Adicionando a chave primaria da tabela Revistas--
@@ -59,7 +59,7 @@ Add Constraint PK_Caixa_IdCaixa Primary Key
 Go
 
 
---Criando a tabela Notifica��o--
+--Criando a tabela Notificação--
 
 Create Table Notificacao
 (IdEmprestimo Int identity (1,1) Not Null,
@@ -67,7 +67,7 @@ HorarioMensagem Datetime Not Null,
 Mensagem Varchar (20) Not Null,)
 Go
 
---Adicionando a chave primaria da tabela Notifica��o--
+--Adicionando a chave primaria da tabela Notificação--
 
 Alter table Notificacao 
 Add Constraint PK_Notificacao_IdEmprestimo Primary Key
