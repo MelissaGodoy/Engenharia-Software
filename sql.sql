@@ -84,6 +84,7 @@ Alter table Notificacao
 Go	
 
 
+
 --Criando a tabela Notificação--
 
 Create Table Notificacao
