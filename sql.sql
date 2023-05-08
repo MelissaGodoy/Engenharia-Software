@@ -88,7 +88,7 @@
 	Go	
 
 	Alter table Revistas
-	Add Constraint [FK_Revistas_Caixa_IdDaCaixa] Foreign Key (IdDaCaixa)
-  	References Caixa (IdDaCaixa)
+	Add Constraint [FK_Revistas_Caixa_IdCaixa] Foreign Key (IdCaixa)
+  	References Caixa (IdCaixa)
 	Go
 
