@@ -76,8 +76,15 @@
 	Go
 	
 	--Adicionando um relacionamento entre a tabela revistas e a tabela caixa--
-Alter Table Revistas
- Add Constraint [FK_Revistas_Caixa_IdCaixa] Foreign Key (IdCaixa)
-  References Caixa (IdCaixa)
-Go	
+	Alter Table Revistas
+	Add Constraint [FK_Revistas_Caixa_IdCaixa] Foreign Key (IdCaixa)
+	References Caixa (IdCaixa)
+	Go	
+
+--Adicionando o Relacionamento entre Emprestimo e a Notificação --
+	Alter table Notificacao
+	Add Constraint [FK_Notificacao_emprestimo_IdEmprestimo] Foreign Key (IdEmprestimo)
+	References Emprestimo (IdEmprestimo)
+	Go	
+
 
