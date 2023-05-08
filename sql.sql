@@ -121,3 +121,11 @@ Values (  150,'Terror','Vermelho')
  --Inserindo dados na tabela Revistas--
  Insert Into Revistas (TipoDeColecao, NumeroDaEdicao, AnoDaRevista, IdCaixa)
  Values ( 'terror' , '2' , '2002' , '3')
+ 
+ --Inserindo dados na tabela Revistas--
+ Insert Into Revistas (TipoDeColecao, NumeroDaEdicao, AnoDaRevista, IdCaixa)
+ Values ( 'aventura' , 2 , 2002 , 2)
+
+ --Inserindo dados na tabela Revistas--
+ Insert Into Revistas (TipoDeColecao, NumeroDaEdicao, AnoDaRevista, IdCaixa)
+ Values ('Ação' , 2 , 2002 , 1)
