@@ -87,4 +87,7 @@
 	References Emprestimo (IdEmprestimo)
 	Go	
 
+	Add Constraint [FK_Revistas_Caixa_IdDaCaixa] Foreign Key (IdDaCaixa)
+  	References Caixa (IdDaCaixa)
+	Go
 
