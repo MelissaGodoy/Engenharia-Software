@@ -43,3 +43,42 @@ Add Constraint PK_Revista_CodigoRevista Primary Key
 (CodigoRevista)
 Go	
 
+--Criando um novo banco de dados--
+Create Database EngenhariaSoftware
+Go
+
+
+--Conectando-se ao banco de dados--
+Use EngenhariaSoftware
+Go
+
+--Criando a tabela "Caixa" --
+
+Create Table Caixa 
+(IdCaixa Int identity (1,1) Not Null,
+PesoCaixa Int Not Null,
+EtiquetaCaixa Varchar(70) Not Null,
+Cor Varchar (50) Not Null)
+Go
+
+--Adicionando a chave primaria da tabela Caixa--
+Alter table Caixa
+Add Constraint PK_Caixa_IdCaixa Primary Key
+(IdCaixa)
+Go
+
+
+--Criando a tabela Notifica��o--
+
+Create Table Notificacao
+(IdEmprestimo Int identity (1,1) Not Null,
+HorarioMensagem Datetime Not Null,
+Mensagem Varchar (20) Not Null,)
+Go
+
+--Adicionando a chave primaria da tabela Notifica��o--
+
+Alter table Notificacao 
+Add Constraint PK_Notificacao_IdEmprestimo Primary Key
+(IdEmprestimo)
+Go
