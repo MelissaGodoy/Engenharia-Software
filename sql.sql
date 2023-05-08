@@ -27,5 +27,18 @@ CREATE TABLE emprestimo(
 
 alter table emprestimo
 	add constraint PK_emprestimo_IdEmprestimo Primary Key(IdEmprestimo)
-	
+--Criando a tabela Revistas--
+Create Table Revistas
+(CodigoRevista Int identity (1,1) Not Null,
+TipoDeColeção Varchar(60) Not Null,
+NumeroDaEdicao Int Not Null,
+AnoDaRevista Int Not Null,
+CodigoDaCaixa Int Not Null)
+Go
+
+--Adicionando a chave primaria da tabela Revistas--
+Alter Table Revistas
+Add Constraint PK_Revista_CodigoRevista Primary Key
+(CodigoRevista)
+Go	
 
