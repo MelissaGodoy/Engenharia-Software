@@ -79,3 +79,11 @@ Alter Table Revistas
  Add Constraint [FK_Revistas_Caixa_IdDaCaixa] Foreign Key (IdDaCaixa)
   References Caixa (IdDaCaixa)
 Go
+
+alter table emprestimo
+	add constraint FK_emprestimo_CadastroAmigo_IdAmigo foreign key(IdAmigo)
+	references CadastroAmigo(IdAmigo)
+
+alter table emprestimo
+	add constraint FK_emprestimo_Revistas_CodigoRevista foreign key(CodigoDaRevista)
+	references Revistas(CodigoRevista)
