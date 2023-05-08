@@ -110,13 +110,13 @@ Values ('Rua João 23',119563277,'Julio Cesar Almeida', 'Renato Cesar Almeida'),
 --Inserindo os valores da tabela Caixa--
 
 	Insert Into Caixa (  PesoCaixa,	EtiquetaCaixa, Cor)
-Values (  250,'Ação','Azul')
+Values (  1, 250,'Ação','Azul')
 
 	Insert Into Caixa (  PesoCaixa,	EtiquetaCaixa, Cor)
-Values ( 200,'Aventura','Amarelo')
+Values ( 2, 200,'Aventura','Amarelo')
 	
 	Insert Into Caixa (  PesoCaixa,	EtiquetaCaixa, Cor)
-Values (  150,'Terror','Vermelho')
+Values ( 3, 150,'Terror','Vermelho')
 
  --Inserindo dados na tabela Revistas--
  Insert Into Revistas (TipoDeColeção, NumeroDaEdicao, AnoDaRevista, IdCaixa)
@@ -132,3 +132,14 @@ Values (  150,'Terror','Vermelho')
 insert into emprestimo(IdAmigo,CodigoDaRevista,DataEmprestimo,DataDevolucao) values(1,1,'08-05-2023','08-06-2022')
 insert into emprestimo(IdAmigo,CodigoDaRevista,DataEmprestimo,DataDevolucao) values(2,2,'08-05-2023','08-06-2022')
 insert into emprestimo(IdAmigo,CodigoDaRevista,DataEmprestimo,DataDevolucao) values(3,3,'08-05-2023','08-06-2022')
+
+--Inserindo os valores da tabela Notificação --
+
+	Insert Into Notificacao( IdEmprestimo, HorarioMensagem, Mensagem)
+Values ( 1,'06-03-2023 09:00:00','Venha emprestar um livro novamente, aproveite para devolver caso haja pegado!')
+
+	Insert Into Notificacao( IdEmprestimo, HorarioMensagem, Mensagem)
+Values ( 2,'15-4-2023 09:00:00','Está na hora de pegar um novo livro!')
+	
+	Insert Into Notificacao( IdEmprestimo, HorarioMensagem, Mensagem)
+Values ( 3,'12-5-2023 09:00:00','Ler faz bem para o corpo e mente!')
