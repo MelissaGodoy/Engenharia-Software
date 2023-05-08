@@ -27,3 +27,6 @@ CREATE TABLE emprestimo(
 
 alter table emprestimo
 	add constraint PK_emprestimo_IdEmprestimo Primary Key(IdEmprestimo)
+	
+	
+	yasmin
