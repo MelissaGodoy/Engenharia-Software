@@ -84,10 +84,6 @@ Alter table Notificacao
 Go	
 
 
-Drop table Notificacao
-Go
-
-
 --Criando a tabela Notificação--
 
 Create Table Notificacao
