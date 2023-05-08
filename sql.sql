@@ -99,3 +99,12 @@
 	Go
 	
 
+--Inserindo dados na tabela CdastroAmigo --
+	
+		Insert Into CadastroAmigo(Endereco, Telefone, NomeResponsavel,NomeAmigo)
+Values ('Rua João 23',119563277,'Julio Cesar Almeida', 'Renato Cesar Almeida'),
+( 'Rua Marcos Santos', 119845127,'Luiza Ferreira', 'Juliana Santos'),
+ ( 'Rua Bertioga',119465472,'Fabiana Moraes', 'Karina Moraes')
+ 
+
+
